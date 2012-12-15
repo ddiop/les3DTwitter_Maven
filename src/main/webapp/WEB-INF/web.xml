@@ -5,10 +5,9 @@
         <persistence-context-ref-name>persistence/EntityManager</persistence-context-ref-name>
         <persistence-unit-name>FMIN362_PU</persistence-unit-name>
     </persistence-context-ref>
-   
     <listener>
-        <display-name>CycleDeVie</display-name>
-        <listener-class>fmin362.CycleDeVie</listener-class>
+        <display-name>Lifecycle</display-name>
+        <listener-class>fmin362.Lifecycle</listener-class>
     </listener>
     <servlet>
         <servlet-name>JerseyServletName</servlet-name>

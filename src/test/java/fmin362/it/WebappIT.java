@@ -55,8 +55,8 @@ public class WebappIT
 
         // Récupération d'un objet java déserializé depuis le JSON
         Tweet tweet = tweetResource.accept( MediaType.APPLICATION_JSON ).get( Tweet.class );
-        assertThat( tweet.countUsers(), equalTo( 1 ) );
-        assertThat( tweet.countMessages(), equalTo( 2) );
+        assertThat( tweet.countUserAccounts(), equalTo( 3 ) );
+        assertThat( tweet.countMessages(), equalTo( 3) );
     }
-   
+  
 }

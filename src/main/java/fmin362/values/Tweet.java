@@ -3,33 +3,35 @@ package fmin362.values;
 import java.util.ArrayList;
 import java.util.List;
 
-import fmin362.model.User;
+import fmin362.model.UserAccount;
 
 public class Tweet {
-	private List<User> users;
+
+	private final List<UserAccount> userAccounts;
 
 	public Tweet() {
-		this.users = new ArrayList<User>();
+		this.userAccounts = new ArrayList<UserAccount>();
 	}
 
-	public Tweet(List<User> users) {
+	public Tweet(List<UserAccount> userAccounts) {
 
-		this.users = users;
+		this.userAccounts = userAccounts;
 	}
 
-	public List<User> getUsers() {
-		return users;
+	public List<UserAccount> getUserAccounts() {
+		return userAccounts;
 	}
 
-	public int countUsers() {
-		return users.size();
+	public int countUserAccounts() {
+		return userAccounts.size();
 	}
 
 	public int countMessages() {
 		int count = 0;
-		for (User user : users) {
-			count += user.getMessages().size();
+		for (UserAccount userAccount : userAccounts) {
+			count += userAccount.getMessages().size();
 		}
 		return count;
 	}
+
 }
